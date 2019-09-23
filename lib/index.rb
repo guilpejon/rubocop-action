@@ -2,15 +2,11 @@ require 'net/http'
 require 'json'
 require 'time'
 
+
 @GITHUB_SHA = ENV["GITHUB_SHA"]
 @GITHUB_EVENT_PATH = ENV["GITHUB_EVENT_PATH"]
 @GITHUB_TOKEN = ENV["GITHUB_TOKEN"]
 @GITHUB_WORKSPACE = ENV["GITHUB_WORKSPACE"]
-
-puts @GITHUB_SHA
-puts @GITHUB_EVENT_PATH
-puts @GITHUB_TOKEN
-puts @GITHUB_WORKSPACE
 
 @event = JSON.parse(File.read(@GITHUB_EVENT_PATH))
 @repository = @event["repository"]
