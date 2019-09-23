@@ -2,7 +2,6 @@ require 'net/http'
 require 'json'
 require 'time'
 
-
 @GITHUB_SHA = ENV["GITHUB_SHA"]
 @GITHUB_EVENT_PATH = ENV["GITHUB_EVENT_PATH"]
 @GITHUB_TOKEN = ENV["GITHUB_TOKEN"]
